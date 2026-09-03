@@ -1,0 +1,16 @@
+% Facts
+bird(eagle).
+bird(sparrow).
+bird(penguin).
+bird(duck).
+
+% Penguin cannot swim
+swim(penguin) :- !, fail.
+
+% Birds can fly
+fly(X) :- bird(X).
+
+% Check whether a bird can swim
+can_swim(X) :-
+    bird(X),
+    swim(X).

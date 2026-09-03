@@ -1,0 +1,24 @@
+% Facts
+
+feathers(parrot).
+lays_eggs(parrot).
+
+fur(dog).
+gives_birth(dog).
+
+scales(snake).
+lays_eggs(snake).
+
+% Rules
+
+animal_type(Animal, bird) :-
+    feathers(Animal),
+    lays_eggs(Animal).
+
+animal_type(Animal, mammal) :-
+    fur(Animal),
+    gives_birth(Animal).
+
+animal_type(Animal, reptile) :-
+    scales(Animal),
+    lays_eggs(Animal).
